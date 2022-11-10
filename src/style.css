@@ -1,0 +1,293 @@
+.Home {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Home .menu {
+  width: 300px;
+  height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Game {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+}
+
+.Game .card {
+  background-color: #1811a7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#130e7e), to(#261bf7));
+  background: linear-gradient(180deg, #130e7e, #261bf7);
+  color: white;
+  padding: 20px;
+  border: 5px solid orange;
+  font-family: 'rosario';
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-size: 2rem;
+}
+
+.Game .respuesta .correcto h1 {
+  color: #68fc68;
+}
+
+.Game .respuesta .incorrecto {
+  color: #ff3c3c;
+  padding: 150px;
+}
+
+.Game .interfazPregunta {
+  width: 100%;
+}
+
+.Game .interfazPregunta .Puntajes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'rosario';
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.Game .interfazPregunta .Puntajes .equipo {
+  color: yellow;
+}
+
+.Game .interfazPregunta .Puntajes .puntaje {
+  color: white;
+}
+
+.Game .interfazPregunta .int-preg-mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.Game .interfazPregunta .Pregunta {
+  width: 80%;
+}
+
+.Game .interfazPregunta .Tiempo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: 'rosario';
+  font-size: 2rem;
+}
+
+.Game .interfazPregunta .Tiempo .contenedor {
+  background-color: #222;
+  height: 200px;
+  border-radius: 50%;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.Game .interfazPregunta .Opciones {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.Game .interfazPregunta .Opciones .opcion {
+  cursor: pointer;
+  margin: 0.4rem;
+  font-size: 1.3rem;
+}
+
+.Game .welcomeMsg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Game .title {
+  font-size: 6rem;
+  font-family: 'lobster';
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#7e7e7e));
+  background: linear-gradient(180deg, #ffffff, #7e7e7e);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Game .subtitle {
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'rosario';
+  letter-spacing: 0;
+}
+
+.Game button {
+  background-color: #2318BB;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  padding: 10px;
+  width: 200px;
+  border-color: yellow;
+  border-radius: 10px;
+}
+
+.Game .main-btn {
+  padding: 20px;
+  width: 300px;
+  height: 75px;
+  font-size: 1.5rem;
+}
+
+@-webkit-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  50% {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  100% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+
+@keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  50% {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  100% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+
+@-webkit-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  50% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+  100% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+  }
+  50% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+  100% {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'rosario';
+  src: url("./assets/rosario.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lobster';
+  src: url("./assets/lobster.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+/*# sourceMappingURL=style.css.map */

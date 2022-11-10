@@ -1,0 +1,131 @@
+.Game
+    width: 100vw
+    height: 100vh
+    background-image: url(./assets/background.png)
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 30px
+
+    .card
+        background-color: #1811a7
+        background: linear-gradient(180deg,#130e7e,#261bf7)
+        color: white
+        padding: 20px
+        border: 5px solid orange
+        font-family: 'rosario'
+        text-transform: uppercase
+        border-radius: 15px
+        font-size: 2rem
+
+    .respuesta
+        .correcto
+            h1
+                color: #68fc68
+        .incorrecto
+            color: #ff3c3c
+            padding: 150px
+
+    .interfazPregunta
+        width: 100%
+
+        .Puntajes
+            display: flex
+            justify-content: space-between
+            font-family: 'rosario'
+            font-size: 2rem
+            margin-bottom: 1rem
+            
+            .equipo
+                color: yellow
+
+            .puntaje
+                color: white
+
+        .int-preg-mid
+            display: flex
+            margin-bottom: 1rem
+
+        .Pregunta
+            width: 80%
+
+        .Tiempo
+            display: flex
+            justify-content: center
+            align-items: center
+            color: white
+            font-family: 'rosario'
+            font-size: 2rem
+
+            .contenedor
+                background-color: #222
+                height: 200px 
+                border-radius: 50%
+                width: 200px
+                display: flex
+                justify-content: center
+                align-items: center
+                text-align: center
+        
+        .Opciones
+            display: grid
+            grid-template-columns: 50% 50%
+            grid-template-rows: 50% 50%
+            .opcion
+                cursor: pointer
+                margin: 0.4rem
+                font-size: 1.3rem
+
+    .welcomeMsg
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    .title
+        font-size: 6rem
+        font-family: 'lobster' 
+        background: linear-gradient(180deg,#ffffff,#7e7e7e)
+        background-clip: text
+        -webkit-text-fill-color: transparent
+
+    .subtitle
+        font-size: 2.5rem
+        color: white
+        font-family: 'rosario'
+        letter-spacing: 0
+
+    button
+        background-color: #2318BB
+        color: white
+        margin-bottom: 20px
+        font-size: 1rem
+        padding: 10px
+        width: 200px
+        border-color: yellow
+        border-radius: 10px
+
+    .main-btn
+        padding: 20px
+        width: 300px
+        height: 75px
+        font-size: 1.5rem
+
+
+@keyframes spin1
+  0% 
+    transform: rotate(225deg)
+  50%
+    transform: rotate(225deg)
+  100% 
+    transform: rotate(405deg)
+
+@keyframes spin2
+  0%
+    transform: rotate(225deg)
+  50%
+    transform: rotate(405deg)
+  100%
+    transform: rotate(405deg)
