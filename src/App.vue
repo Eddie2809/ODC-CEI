@@ -4,8 +4,6 @@
   import Jugar from './components/Jugar.vue'
   import SeleccionEquipos from './components/SeleccionEquipos.vue'
 
-  import {preguntas} from './rondas/ronda1.js'
-
   export default{
     components: {
       Home,

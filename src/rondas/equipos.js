@@ -1,6 +1,6 @@
 export let equipos = [
     'Esto es fit',
-    'Tomates',
-    'Peperonis',
-    'Escuincles'
+    'Empresaurios',
+    'Los iones',
+    'Gladiadores del Caribe'
 ]

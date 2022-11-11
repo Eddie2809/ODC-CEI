@@ -87,12 +87,12 @@
         align-items: center
         justify-content: center
 
-    .title
-        font-size: 6rem
-        font-family: 'lobster' 
-        background: linear-gradient(180deg,#ffffff,#7e7e7e)
-        background-clip: text
-        -webkit-text-fill-color: transparent
+    .title2
+        color: mix(#fff, #fff, 85%)
+        font-size: calc(1em + 10vw) 
+        font-weight: 900
+        text-shadow: -0.0075em 0.0075em 0 mix(#fff, #e91e63, 94%), 0.005em 0.005em 0 mix(#fff, #e91e63, 60%), 0.01em 0.01em 0 mix(#fff, #e91e63, 62%), 0.015em 0.015em mix(#fff, #e91e63, 64%),  0.02em 0.02em 0 mix(#fff, #e91e63, 66%),  0.025em 0.025em 0 mix(#fff, #e91e63, 68%), 0.03em 0.03em 0 mix(#fff, #e91e63, 70%), 0.035em 0.035em 0 mix(#fff, #e91e63, 72%)
+        text-align: center
 
     .subtitle
         font-size: 2.5rem
@@ -115,6 +115,53 @@
         width: 300px
         height: 75px
         font-size: 1.5rem
+
+    .presentacionEquipos
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        h2
+            font-family: 'Mr Dafoe'
+            margin: 0
+            font-size: 5.5em
+            margin-top: -0.6em
+            color: white
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1
+            transform: rotate(-7deg)
+  
+        .equipoA
+            position: relative
+            bottom: 60px
+            right: 300px
+
+        .equipoB
+            position: relative
+            left: 300px
+
+        h1
+            position: relative
+            font-family: 'Exo'
+            font-size: 5em
+            margin: 0
+            transform: skew(-15deg)
+            letter-spacing: 0.03em
+
+            span:first-child
+                display: block
+                text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 5em #165ff3
+                -webkit-text-stroke: 0.06em rgba(black, 0.5)
+            
+            span:last-child
+                position: absolute
+                left: 0
+                top: 0
+                background-image: linear-gradient(#032d50 25%, #00a1ef 35%, white 50%, #20125f 50%, #8313e7 55%, #ff61af 75%)
+                -webkit-text-stroke: 0.01em #94a0b9
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+  
 
 
 @keyframes spin1

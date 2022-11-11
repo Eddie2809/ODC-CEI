@@ -14,7 +14,7 @@
         data(){
             return{
                 estadoTemporizador: 'preparado',
-                preguntaActiva: 0,
+                preguntaActiva: 13,
                 turno: 0,
                 respuesta: '',
                 correcto: false,
@@ -74,7 +74,7 @@
                 this.turno = (this.turno + 1) % 2
             },
             siguientePregunta(){
-                if(this.preguntaActiva === this.preguntas.length){
+                if(this.preguntaActiva + 1 === this.preguntas.length){
                     this.terminarJuego()
                 }
                 this.respondido = false

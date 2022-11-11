@@ -13,6 +13,25 @@
                 equipoB: '',
                 equipos: equipos
             }
+        },
+        methods: {
+            empezarJuego(){
+                let nuevosEquipos = [this.equipoA,this.equipoB]
+                let nuevasPreguntas = []
+                if(this.ronda === '1'){
+                    nuevasPreguntas = preguntas1
+                }
+                if(this.ronda === '2'){
+                    nuevasPreguntas = preguntas2
+                }
+                if(this.ronda === '3'){
+                    nuevasPreguntas = preguntas3
+                }
+
+                this.asignarPreguntasYEquipos(nuevasPreguntas,nuevosEquipos)            
+                console.log(nuevosEquipos)
+                this.changeRoute('Jugar')
+            }
         }
     }
 </script>
@@ -20,12 +39,12 @@
 <template>
     <p>Selecciona el primer equipo</p>
     <select v-model="equipoB" name="" id="">
-        <option v-for="equipo in equipos" value={{equipo}}>{{equipo}}</option>
+        <option v-for="equipo in equipos" :key="equipo" :value=equipo>{{equipo}}</option>
     </select>
 
     <p>Selecciona el segundo equipo</p>
     <select v-model="equipoA" name="" id="">
-        <option v-for="equipo in equipos" value={{equipo}}>{{equipo}}</option>
+        <option v-for="equipouwu in equipos" :key=equipouwu :value=equipouwu>{{equipouwu}}</option>
     </select>
 
     <p>Selecciona la ronda:</p>
@@ -35,21 +54,6 @@
         <option value="3">Ronda 3</option>
     </select>
     <div class="SeleccionEquipos">
-        <button @click="() => {
-            let nuevosEquipos = [equipoA,equipoB]
-            let nuevasPreguntas = []
-            if(this.ronda === '1'){
-                nuevasPreguntas = preguntas1
-            }
-            if(this.ronda === '2'){
-                nuevasPreguntas = preguntas2
-            }
-            if(this.ronda === '3'){
-                nuevasPreguntas = preguntas3
-            }
-
-            asignarPreguntasYEquipos(nuevasPreguntas,nuevosEquipos)            
-
-        }">Jugar</button>
+        <button @click="this.empezarJuego()">Jugar</button>
     </div>
 </template>

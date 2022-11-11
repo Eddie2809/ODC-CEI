@@ -9,8 +9,8 @@
 </script>
 
 <template>
-    <div class="Bienvenida">
-        <p>Bienvenidos a la</p>
-        <p>Olimpiada de Conocimiento</p>
+    <div class="Bienvenida welcomeMsg">
+        <p class="subtitle">Bienvenidos a la</p>
+        <p class="title2">Olimpiada de Conocimiento</p>
     </div> 
 </template>
