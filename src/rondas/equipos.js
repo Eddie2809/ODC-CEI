@@ -1,5 +1,5 @@
 export let equipos = [
-    'Lechugas',
+    'Esto es fit',
     'Tomates',
     'Peperonis',
     'Escuincles'

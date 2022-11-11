@@ -7,7 +7,8 @@
                 milisegundos: 0,
                 segundosTexto: '15',
                 interval: null,
-                pausado: true
+                pausado: true,
+                countdown: new Date().getTime()
             }
         },
         methods: {
@@ -20,6 +21,10 @@
                     clearInterval(this.interval)
                 }
                 this.pausado = !this.pausado
+            },
+            startTimer2(){
+                const now = new Date().getTime()
+                const distance = this.countdown - now
             },
             startTimer(){
                 this.milisegundos--

@@ -1,4 +1,4 @@
-export let preguntas = [
+export let preguntas1 = [
     {
         preguntaTexto: "Todo cuerpo persevera en su estado de reposo o movimiento uniforme y rectilíneo a no ser que sea obligado a cambiar su estado por fuerzas impresas sobre él",
         preguntaImagen: "",

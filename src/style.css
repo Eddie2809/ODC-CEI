@@ -90,6 +90,10 @@
   color: yellow;
 }
 
+.Game .interfazPregunta .Puntajes .equipoTurno {
+  text-shadow: 0 0 10px white;
+}
+
 .Game .interfazPregunta .Puntajes .puntaje {
   color: white;
 }

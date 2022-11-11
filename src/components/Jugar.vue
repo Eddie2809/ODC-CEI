@@ -14,7 +14,7 @@
         data(){
             return{
                 puntajes: [0,0],
-                estadoDelJuego: "jugando"
+                estadoDelJuego: "bienvenida"
             }
         },
         props: ['preguntas','equipos','ronda','puntajesDificultad'],
@@ -24,16 +24,27 @@
             },
             sumarPuntos(equipo, puntos){
                 this.puntajes[equipo] += puntos
+            },
+            cambiarEstado(){
+                if(this.estadoDelJuego == 'bienvenida'){
+                    this.estadoDelJuego = 'presentacionEquipos'
+                }
+                else if(this.estadoDelJuego == 'presentacionEquipos'){
+                    this.estadoDelJuego = 'jugando'
+                }
+            },
+            terminarJuego(){
+                this.estadoDelJuego = 'finalizado'
             }
         }
     }
 </script>
 
 <template>
-    <div class="Game" @click="this.keyEvent()">
+    <div class="Game" @click="this.cambiarEstado()">
         <Bienvenida v-if="estadoDelJuego === 'bienvenida'"/>
         <PresentacionEquipos :equipos="equipos" v-if="estadoDelJuego === 'presentacionEquipos'"/>
-        <InterfazPreguntas :sumarPuntos="this.sumarPuntos" :puntajesDificultad="puntajesDificultad" :puntajes="this.puntajes" :preguntas="preguntas" :equipos="equipos" v-if="estadoDelJuego === 'jugando'"/>
+        <InterfazPreguntas :terminarJuego="this.terminarJuego" :sumarPuntos="this.sumarPuntos" :puntajesDificultad="puntajesDificultad" :puntajes="this.puntajes" :preguntas="preguntas" :equipos="equipos" v-if="estadoDelJuego === 'jugando'"/>
         <PuntajeFinal :equipos="equipos" :puntajes="this.puntajes" v-if="estadoDelJuego === 'finalizado'"/>
     </div>
 </template>

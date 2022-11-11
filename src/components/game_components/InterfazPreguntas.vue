@@ -19,10 +19,11 @@
                 respuesta: '',
                 correcto: false,
                 respondido: false,
-                roboPuntos: false
+                roboPuntos: false,
+                incorrectosSeguidos: 0
             }
         },
-        props: ['preguntas','equipos','puntajes','puntajesDificultad','sumarPuntos'],
+        props: ['preguntas','equipos','puntajes','puntajesDificultad','sumarPuntos','terminarJuego'],
         methods: {
             subirRespuesta(respuestaSeleccionada){
                 let dificultad = this.preguntas[this.preguntaActiva].dificultad
@@ -39,31 +40,43 @@
 
                 this.respondido = true
 
+                //Si la respuesta es correcta
                 if(this.preguntas[this.preguntaActiva].respuesta == respuestaSeleccionada){
-                    this.correcto = true
                     audioCorrecto.play()
+                    this.sumarPuntos(this.turno,puntos)
+                    this.preguntaActiva++
+
+                    //Cambiamos de interfaz
+                    this.correcto = true
 
                     if(this.roboPuntos){
-                        this.sumarPuntos(this.turno + 1 % 2, puntos)
+                        this.turno = (this.turno + 1) % 2
                     }
-                    else{
-                        this.sumarPuntos(this.turno,puntos)
-                    }
-                    this.preguntaActiva++
-                    this.turno = (this.turno + 1) % 2
                 }
+                //Si la respuesta es incorrecta
                 else{
-                    this.correcto = false
                     audioIncorrecto.play()
+                    this.correcto = false
+                    this.incorrectosSeguidos
+
+                    //Si se están robando puntos
                     if(this.roboPuntos){
+                        this.roboPuntos = false
                         this.preguntaActiva++
+                        this.turno = (this.turno + 1) % 2
                     }
+                    //Si no se están robando puntos
                     else{
                         this.roboPuntos = true
                     }
                 }
+                // Cambiar el turno del jugador
+                this.turno = (this.turno + 1) % 2
             },
             siguientePregunta(){
+                if(this.preguntaActiva === this.preguntas.length){
+                    this.terminarJuego()
+                }
                 this.respondido = false
             }
         }
@@ -72,7 +85,7 @@
 
 <template>
     <div v-if="!this.respondido" class="interfazPregunta">
-        <Puntajes :puntajes="puntajes" :equipos="equipos" />
+        <Puntajes :turno="this.turno" :puntajes="puntajes" :equipos="equipos" />
         <div class="int-preg-mid">
             <Pregunta :preguntaActiva="this.preguntaActiva" :preguntas="preguntas" />
             <Tiempo :estadoTemporizador="this.estadoTemporizador"/>
@@ -81,7 +94,7 @@
     </div>
     <div v-if="this.respondido" class="respuesta">
         <div @click="this.siguientePregunta" v-if="this.correcto === true" class="correcto card">
-            <h1>Respuesta correcta!</h1>
+            <h1>Respuesta correcta</h1>
             <p>Pregunta: <span>{{preguntas[this.preguntaActiva].preguntaTexto}}</span></p>
             <p>Respuesta: <span>{{this.respuesta}}</span></p>
         </div>
