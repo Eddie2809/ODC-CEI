@@ -1,11 +1,11 @@
 <script>
     export default{
-        props: ['estadoTemporizador'],
+        props: ['estadoTemporizador','preguntas','preguntaActiva'],
         data(){
             return{
                 segundos: 15,
                 milisegundos: 0,
-                segundosTexto: '15',
+                segundosTexto: 'Iniciar',
                 interval: null,
                 pausado: true,
                 countdown: new Date().getTime()
@@ -13,6 +13,9 @@
         },
         methods: {
             start(){
+                this.segundos = this.preguntas[this.preguntaActiva].tiempo
+                this.segundosTexto = String(this.segundos)
+
                 if(this.pausado){
                     clearInterval(this.interval)
                     this.interval = setInterval(this.startTimer,0)
@@ -50,7 +53,9 @@
 
 <template>
     <div @click="this.start()" class="Tiempo">
-        <div class="contenedor">
+        <div class="box">
+            <div class="loader1">
+            </div>
             <p><span>{{this.segundosTexto}}</span></p>
         </div>
     </div>

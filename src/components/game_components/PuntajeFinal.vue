@@ -6,13 +6,13 @@
 
 <template>
     <div class="puntajeFinal">
-        <div class="equipoA">
-            <p class="card">{{equipos[0]}}</p>
-            <p class="card">{{puntajes[0]}}</p>
+        <div class="equipoContainer">
+            <p class="card equipo">{{equipos[0]}}</p>
+            <p class="card puntos">{{puntajes[0]}} PUNTOS</p>
         </div>
-        <div class="equipoB">
-            <p class="card">{{equipos[1]}}</p>
-            <p class="card">{{puntajes[1]}}</p>
+        <div class="equipoContainer">
+            <p class="card equipo">{{equipos[1]}}</p>
+            <p class="card puntos">{{puntajes[1]}} PUNTOS</p>
         </div>
     </div>
 </template>

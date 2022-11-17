@@ -13,7 +13,7 @@
     },
     data(){
       return{
-        route: 'Home',
+        route: 'seleccionEquipos',
         equipos: [],
         ronda: 1,
         puntajesDificultad: [25,50,100],

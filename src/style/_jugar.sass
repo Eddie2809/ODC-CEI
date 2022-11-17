@@ -9,6 +9,29 @@
     justify-content: center
     padding: 30px
 
+    .puntajeFinal
+        display: flex
+        width: 90%
+        justify-content: space-between
+        height: 250px
+
+        .equipoContainer
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+
+        .equipo
+            padding: 30px
+            font-size: 2.5rem
+            box-shadow: 7px 7px 10px #2b2b2b
+
+        .puntos
+            font-size: 1.5rem
+            width: 250px
+            text-align: center
+            box-shadow: 7px 7px 10px #2b2b2b
+
     .card
         background-color: #1811a7
         background: linear-gradient(180deg,#130e7e,#261bf7)
@@ -55,23 +78,25 @@
             width: 80%
 
         .Tiempo
-            display: flex
-            justify-content: center
-            align-items: center
+            width: 20%
             color: white
             font-family: 'rosario'
             font-size: 2rem
+            display: flex
+            justify-content: center
+            align-items: center
 
-            .contenedor
-                background-color: #222
-                height: 200px 
-                border-radius: 50%
+            .box
+                border: 5px solid white
+                box-shadow: 5px 5px 20px black
                 width: 200px
+                height: 200px
+                text-align: center
+                border-radius: 50%
                 display: flex
                 justify-content: center
                 align-items: center
-                text-align: center
-        
+            
         .Opciones
             display: grid
             grid-template-columns: 50% 50%
@@ -134,11 +159,11 @@
         .equipoA
             position: relative
             bottom: 60px
-            right: 300px
+            right: 230px
 
         .equipoB
             position: relative
-            left: 300px
+            left: 230px
 
         h1
             position: relative
@@ -163,19 +188,8 @@
                 -webkit-text-fill-color: transparent
   
 
-
-@keyframes spin1
-  0% 
-    transform: rotate(225deg)
-  50%
-    transform: rotate(225deg)
-  100% 
-    transform: rotate(405deg)
-
-@keyframes spin2
-  0%
-    transform: rotate(225deg)
-  50%
-    transform: rotate(405deg)
-  100%
-    transform: rotate(405deg)
+@keyframes loader1
+    0%
+        transform:rotate(0deg)
+    100%
+        transform:rotate(360deg)

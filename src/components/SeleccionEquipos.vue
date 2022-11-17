@@ -1,8 +1,11 @@
 <script>
     import {equipos} from '../rondas/equipos.js'
-    import {preguntas1} from '../rondas/ronda1.js'
-    import {preguntas2} from '../rondas/ronda2.js'
-    import {preguntas3} from '../rondas/ronda3.js'
+    import {ronda1} from '../rondas/ronda1.js'
+    import {ronda2} from '../rondas/ronda2.js'
+    import {ronda3} from '../rondas/ronda3.js'
+    import {rondaprueba} from '../rondas/rondaprueba'
+    import {rondaextra1} from '../rondas/rondaextra1.js'
+    import {rondaextra2} from '../rondas/rondaextra2.js'
 
     export default{
         props: ['changeRoute','asignarPreguntasYEquipos'],
@@ -19,16 +22,16 @@
                 let nuevosEquipos = [this.equipoA,this.equipoB]
                 let nuevasPreguntas = []
                 if(this.ronda === '1'){
-                    nuevasPreguntas = preguntas1
+                    nuevasPreguntas = ronda1
                 }
                 if(this.ronda === '2'){
-                    nuevasPreguntas = preguntas2
+                    nuevasPreguntas = ronda2
                 }
                 if(this.ronda === '3'){
-                    nuevasPreguntas = preguntas3
+                    nuevasPreguntas = ronda3
                 }
 
-                this.asignarPreguntasYEquipos(nuevasPreguntas,nuevosEquipos)            
+                this.asignarPreguntasYEquipos(nuevasPreguntas,nuevosEquipos)
                 console.log(nuevosEquipos)
                 this.changeRoute('Jugar')
             }
